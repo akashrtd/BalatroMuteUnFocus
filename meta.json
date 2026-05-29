@@ -1,0 +1,11 @@
+{
+  "title": "BalatroMuteUnFocus",
+  "requires-steamodded": false,
+  "requires-talisman": false,
+  "categories": [
+    "Quality of Life"
+  ],
+  "author": "akashrathod",
+  "version": "1.0.0",
+  "description": "Mutes all audio when the game window loses focus, restores volume when regained."
+}

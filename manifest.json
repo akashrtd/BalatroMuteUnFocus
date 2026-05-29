@@ -1,0 +1,9 @@
+{
+    "name": "BalatroMuteUnFocus",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/akashrathod/BalatroMuteUnFocus",
+    "description": "Mutes all audio when the game window loses focus and restores it when you switch back.",
+    "dependencies": [
+        "Thunderstore-lovely-0.7.1"
+    ]
+}

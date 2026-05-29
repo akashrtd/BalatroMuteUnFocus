@@ -1,0 +1,31 @@
+# BalatroFocusMute
+# Mutes all audio when the game loses focus, restores on regain.
+
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 10
+
+[[patches]]
+[patches.pattern]
+target = "main.lua"
+pattern = "function love.resize(w, h)"
+position = "before"
+payload = '''
+_G.__fm_prev_vol = nil
+
+function love.focus(f)
+    if f then
+        if _G.__fm_prev_vol then
+            love.audio.setVolume(_G.__fm_prev_vol)
+            _G.__fm_prev_vol = nil
+        end
+    else
+        _G.__fm_prev_vol = love.audio.getVolume()
+        love.audio.setVolume(0)
+    end
+end
+
+'''
+match_indent = true
+times = 1
